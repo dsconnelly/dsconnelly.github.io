@@ -3,6 +3,7 @@
     --red: #E3170A;
     --white: #F8F8FF;
 
+    --border-color: black;
     --border-color: #F8F8FF;
 }
 
@@ -32,13 +33,14 @@ body {
 /* divs and layout */
 
 #container {
-    height: 60%;
-    width: 70%;
+    height: 62%;
+    width: 72%;
+    padding: 2%;
 
     display: flex;
-    align-items: center;
 
     border: 1px solid var(--border-color);
+    border-radius: 20px;
 }
 
 #info {
@@ -60,7 +62,13 @@ body {
     display: flex;
     flex-direction: column;
 
-    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    padding-left: 2.05%;
+    /* padding-right: 2.1%; */
+    margin-left: 2.5%;
+
+    border-left: 1px solid var(--black);
+    /* border: 1px solid var(--border-color); */
 }
 
 #nav {
@@ -77,16 +85,14 @@ body {
 #content {
     height: 80%;
     width: 100%;
+    margin: 0;
+    padding: 0;
 
     display: flex;
     flex-direction: column;
 
     text-align: justify;
     overflow-y: scroll;
-
-    box-sizing: border-box;
-    padding-left: 5%;
-    padding-right: 5%;
 
     border: 1px solid var(--border-color);
 }
@@ -140,5 +146,5 @@ li + li {
 #headshot {
     width: 100%;
 
-    border-radius: 50%;
+    border-radius: 20px;
 }
