@@ -1,48 +1,50 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Dave Connelly</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+<html>
+
+    <head>
+        <title>David S. Connelly</title>
 
         <link rel="stylesheet" href="css/index.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
-        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery-4.0.0.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
 
         <base target="_blank">
     </head>
 
     <body>
-        
-        <div id="panel">
-            <div id="header">
 
-                <img 
-                    id="headshot" 
-                    src="images/headshot.png" 
-                    alt="Dave in the White Mountains."
-                >
+        <div id="content">
 
+            <div id="left">
 
-                <div id="info">
-                    <h1>Dave Connelly</h1>
-                    <p>dsconnelly (at) nyu (dot) edu</p>
+                <a id="headshotLink" href="index.html" target="_self">
+                <img src="images/headshot.jpg"
+                     alt="David by the shores of Lake Geneva."
+                     id="headshot"
+                     >
+                </a>
+
+                <h1>David S. Connelly</h1>
+                <p id="email">dsc254 (at) cornell (dot) edu</p>
+            </div>
+
+            <div id="right">
+                <div id="links">
+                    <h2><span class="nav">about</span></h2>
+                    <h2><span class="nav">notes</span></h2>
+                    <h2><a href="docs/cv.pdf">vita</a></h2>
                 </div>
-
-                
+            
+                <div id="dynamic"></div>
             </div>
-    
-            <div id="nav">
-                <a>about</a>
-                <a>software</a>
-                <a>notes</a>
-                <a>vita</a>
-            </div>
-    
-            <div id="content"></div>
         </div>
+
     </body>
+
 </html>

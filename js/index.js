@@ -1,31 +1,40 @@
 var active = "";
 
-$(document).ready(function() {
-    $("#nav>a").each(function() {
-        $(this).click(function() {
-            page = $(this).html();
-            if (page !== active) {
-                $.ajax({
-                    url: "pages/" + page + ".html",
-                    success: setContent,
-                    dataType: "html"
-                });
-
-                active = page;
-            }
-        });
-    });
-
-    $("#nav>a").first().click();
-});
-
 function setContent(data) {
-    if ($("#content").is(":empty")) {
-        $("#content").html(data);
+    if ($("#dynamic").is(":empty")) {
+        $("#dynamic").html(data);
     } else {
-        $("#content").fadeOut(150, function() {
+        $("#dynamic").fadeOut(75, function () {
             $(this).html(data);
-            $(this).fadeIn(150);
+            $(this).fadeIn(75);
         });
     }
 }
+
+function checkHash() {
+    var hash = window.location.hash;
+    if (!hash) {hash = "#about"};
+    var page = hash.slice(1)
+
+    if (page != active) {
+        $.ajax({
+            url: "pages/" + page + ".html",
+            success: setContent,
+            dataType: "html"
+        });
+    
+        active = "page";
+    }
+
+}
+
+$(window).on("hashchange", checkHash);
+
+$(document).ready(function () {
+    $("span.nav").click(function () {
+        var hash = "#" + $(this).html();
+        window.location.hash = hash;
+    });
+
+    checkHash();
+});
